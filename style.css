@@ -1,0 +1,80 @@
+body {
+	line-height: 1.2;
+}
+
+body {
+    background-color: #fbf1c7;
+    font-family: 'Noto Sans';
+    color: #3c3836;
+    margin: 0;
+    font-size: 1.15em;
+}
+
+
+body.dark-mode{
+    background-color: #282828;
+    color: #ebdbb2;
+}
+
+#bc{
+    margin: 0 auto 0 auto;
+    padding: 3vmin;
+    max-width: max(60vw, min(100vw,130vmin));
+}
+
+p {
+    margin: 0;
+    width: 100%;
+}
+
+h2{
+    margin-bottom: 1vh;
+    font-size: 1.17em;
+}
+
+h1{
+    font-size: 1.5em;
+}
+
+ul{
+    margin-top: 0;
+}
+
+a{
+    color:#076678;
+}
+
+a.dark-mode{
+    color:#83a598;
+}
+
+#name{
+    margin-top: 3vmin;
+    font-weight: 600;
+    height: 1.75em;
+    margin-bottom: 1.2vh;
+    width: 100%;
+}
+
+#actname{
+    float: left;
+    margin: 0;
+    font-size: 1.4em;
+    width: auto;
+}
+
+#ldToggle{
+    float:right;
+    cursor: pointer;
+    padding-top: 0.1em;
+    height: 1.4em;
+    width: 1.4em;
+    content: url("dark.svg");
+    filter: invert(20%) sepia(1%) saturate(6460%) hue-rotate(30deg) brightness(89%) contrast(85%);
+    padding-bottom: 0;
+}
+
+#ldToggle.dark-mode {
+    filter: invert(95%) sepia(4%) saturate(2615%) hue-rotate(341deg) brightness(101%) contrast(84%);
+    content: url("light.svg");
+}
