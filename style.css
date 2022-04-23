@@ -1,25 +1,45 @@
 body {
-	line-height: 1.2;
+    line-height: 1.2;
 }
 
 body {
     background-color: #fbf1c7;
-    font-family: 'Noto Sans';
     color: #3c3836;
-    margin: 0;
+    font-family: 'Noto Sans';
     font-size: 1.15em;
+    margin: 0 auto 0 auto;
+    padding: 1em;
+    max-width: 130vh;
+    min-width: 60vw;
+    transition: 300ms;
 }
 
-
-body.dark-mode{
+.dark-mode body {
     background-color: #282828;
     color: #ebdbb2;
 }
 
-#bc{
-    margin: 0 auto 0 auto;
-    padding: 3vmin;
-    max-width: max(60vw, min(100vw,130vmin));
+.light-mode body {
+    background-color: #fbf1c7;
+    color: #3c3836;
+}
+
+.dark-mode #ldToggle {
+    content: url("light.svg");
+    filter: invert(95%) sepia(4%) saturate(2615%) hue-rotate(341deg) brightness(101%) contrast(84%);
+}
+
+.light-mode #ldToggle {
+    content: url("dark.svg");
+    filter: invert(20%) sepia(1%) saturate(6460%) hue-rotate(30deg) brightness(89%) contrast(85%);
+}
+
+.light-mode a {
+    color: #076678;
+}
+
+.dark-mode a {
+    color: #83a598;
 }
 
 p {
@@ -27,54 +47,40 @@ p {
     width: 100%;
 }
 
-h2{
-    margin-bottom: 1vh;
+h2 {
+    margin-bottom: 0.25em;
     font-size: 1.17em;
 }
 
-h1{
+h1 {
     font-size: 1.5em;
 }
 
-ul{
+ul {
     margin-top: 0;
 }
 
-a{
-    color:#076678;
-}
 
-a.dark-mode{
-    color:#83a598;
-}
-
-#name{
-    margin-top: 3vmin;
+#name {
+    margin-top: 0.5em;
     font-weight: 600;
     height: 1.75em;
-    margin-bottom: 1.2vh;
+    margin-bottom: 0.5em;
     width: 100%;
 }
 
-#actname{
+#actname {
     float: left;
     margin: 0;
     font-size: 1.4em;
     width: auto;
 }
 
-#ldToggle{
-    float:right;
+#ldToggle {
+    float: right;
     cursor: pointer;
     padding-top: 0.1em;
     height: 1.4em;
     width: 1.4em;
-    content: url("dark.svg");
-    filter: invert(20%) sepia(1%) saturate(6460%) hue-rotate(30deg) brightness(89%) contrast(85%);
     padding-bottom: 0;
-}
-
-#ldToggle.dark-mode {
-    filter: invert(95%) sepia(4%) saturate(2615%) hue-rotate(341deg) brightness(101%) contrast(84%);
-    content: url("light.svg");
 }

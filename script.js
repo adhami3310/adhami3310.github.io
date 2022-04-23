@@ -1,9 +1,12 @@
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.classList.toggle("dark-mode");
+} else {
+    document.documentElement.classList.toggle("light-mode");
+}
+
 function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-    for(const el of document.body.getElementsByTagName("a")){
-        el.classList.toggle("dark-mode");
-    }
-    document.getElementById("ldToggle").classList.toggle("dark-mode");
+    document.documentElement.classList.toggle("dark-mode");
+    document.documentElement.classList.toggle("light-mode");
 }
 
 if (location.protocol == 'http:') {
